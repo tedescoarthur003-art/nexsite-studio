@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NexSite Studio</title>
+<meta name="description" content="NexSite Studio — sites modernos e profissionais para pequenos negócios.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#0b1020;color:#f7f8ff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1100px,92%);margin:auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-size:24px;font-weight:800}.logo span{color:#6c8cff}
+nav .links{display:flex;gap:22px;color:#cbd2ee}
+.btn{display:inline-block;background:#6c8cff;color:white;padding:13px 20px;border-radius:10px;font-weight:700}
+.hero{padding:90px 0 70px;text-align:center}
+.hero h1{font-size:clamp(38px,7vw,70px);line-height:1.05;margin-bottom:20px}
+.hero h1 span{color:#6c8cff}.hero p{max-width:680px;margin:0 auto 30px;color:#cbd2ee;font-size:18px}
+section{padding:65px 0}.title{text-align:center;margin-bottom:35px}.title h2{font-size:34px}.title p{color:#aeb7d6}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#141b31;border:1px solid #26304e;border-radius:16px;padding:25px}
+.card h3{margin:12px 0 8px}.card p{color:#b8c0dc}.icon{font-size:30px}
+.price{font-size:32px;font-weight:800;margin:15px 0}.price small{font-size:14px;color:#9da7c7}
+.highlight{border:2px solid #6c8cff;transform:translateY(-6px)}
+.contact{background:#141b31;border-radius:18px;padding:35px;text-align:center}
+footer{padding:30px 0;color:#8993b6;text-align:center;border-top:1px solid #202943}
+@media(max-width:760px){nav .links{display:none}.grid{grid-template-columns:1fr}.hero{padding-top:55px}.highlight{transform:none}}
+</style>
+</head>
+<body>
+<div class="container">
+<nav>
+  <div class="logo">NexSite <span>Studio</span></div>
+  <div class="links"><a href="#servicos">Serviços</a><a href="#planos">Planos</a><a href="#contato">Contato</a></div>
+  <a class="btn" href="#contato">Orçamento</a>
+</nav>
+
+<header class="hero">
+  <h1>Seu negócio merece um site <span>profissional.</span></h1>
+  <p>Criamos sites modernos, rápidos e adaptados para celular para pequenos negócios e empreendedores.</p>
+  <a class="btn" href="#contato">Quero meu site</a>
+</header>
+
+<section id="servicos">
+<div class="title"><h2>O que fazemos</h2><p>Soluções simples para ajudar seu negócio a aparecer na internet.</p></div>
+<div class="grid">
+<div class="card"><div class="icon">🌐</div><h3>Sites profissionais</h3><p>Uma presença online bonita e clara para apresentar sua empresa.</p></div>
+<div class="card"><div class="icon">📱</div><h3>Design responsivo</h3><p>Seu site funcionando bem em celular, tablet e computador.</p></div>
+<div class="card"><div class="icon">🚀</div><h3>Landing pages</h3><p>Páginas focadas em apresentar uma oferta e facilitar o contato.</p></div>
+</div>
+</section>
+
+<section id="planos">
+<div class="title"><h2>Planos iniciais</h2><p>Valores demonstrativos — ajuste conforme seus custos e experiência.</p></div>
+<div class="grid">
+<div class="card"><h3>Essencial</h3><div class="price">R$ 299</div><p>Site de uma página<br>Design responsivo<br>Botão de contato</p></div>
+<div class="card highlight"><h3>Profissional</h3><div class="price">R$ 499</div><p>Até 5 seções<br>Design personalizado<br>Formulário de orçamento</p></div>
+<div class="card"><h3>Premium</h3><div class="price">R$ 799</div><p>Site completo<br>Mais personalização<br>Suporte inicial</p></div>
+</div>
+</section>
+
+<section id="contato">
+<div class="contact">
+<h2>Vamos criar seu próximo site?</h2>
+<p style="color:#b8c0dc;margin:12px 0 22px">Conte o que sua empresa precisa e peça um orçamento.</p>
+<a class="btn" href="mailto:contato@nexsitestudio.com?subject=Pedido%20de%20orçamento">Solicitar orçamento</a>
+</div>
+</section>
+
+<footer>© 2026 NexSite Studio • Projeto demonstrativo</footer>
+</div>
+</body>
+</html>
