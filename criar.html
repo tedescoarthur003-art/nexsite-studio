@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Criar meu site - NexSite Studio</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#0b1020;
+  color:white;
+}
+.container{
+  max-width:700px;
+  margin:auto;
+  padding:30px 20px;
+}
+h1{text-align:center}
+p{text-align:center;color:#cbd2ee}
+.form{
+  background:#141b31;
+  padding:25px;
+  border-radius:16px;
+}
+label{
+  display:block;
+  margin-top:15px;
+  margin-bottom:6px;
+}
+input,textarea,select{
+  width:100%;
+  padding:13px;
+  border:0;
+  border-radius:8px;
+  font-size:16px;
+}
+textarea{height:100px}
+button{
+  width:100%;
+  margin-top:22px;
+  padding:15px;
+  border:0;
+  border-radius:10px;
+  background:#6c8cff;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+#resultado{
+  display:none;
+  margin-top:25px;
+  padding:25px;
+  border-radius:16px;
+  background:#141b31;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Crie seu próprio site</h1>
+<p>Preencha os dados abaixo e veja uma prévia do seu site.</p>
+
+<div class="form">
+
+<label>Nome da empresa</label>
+<input id="empresa" placeholder="Ex: Minha Loja">
+
+<label>Título do site</label>
+<input id="titulo" placeholder="Ex: Bem-vindo à Minha Loja">
+
+<label>Descrição</label>
+<textarea id="descricao" placeholder="Conte um pouco sobre sua empresa"></textarea>
+
+<label>WhatsApp</label>
+<input id="whatsapp" placeholder="Ex: 5527999999999">
+
+<label>Modelo</label>
+<select id="modelo">
+<option>Moderno</option>
+<option>Elegante</option>
+<option>Simples</option>
+</select>
+
+<button onclick="gerarSite()">Gerar meu site</button>
+
+</div>
+
+<div id="resultado">
+<h2 id="rEmpresa"></h2>
+<h1 id="rTitulo"></h1>
+<p id="rDescricao"></p>
+<button onclick="abrirWhatsApp()">Entrar em contato</button>
+</div>
+
+</div>
+
+<script>
+function gerarSite(){
+
+  const empresa = document.getElementById("empresa").value;
+  const titulo = document.getElementById("titulo").value;
+  const descricao = document.getElementById("descricao").value;
+
+  if(!empresa || !titulo){
+    alert("Preencha o nome da empresa e o título.");
+    return;
+  }
+
+  document.getElementById("rEmpresa").innerText = empresa;
+  document.getElementById("rTitulo").innerText = titulo;
+  document.getElementById("rDescricao").innerText = descricao;
+
+  document.getElementById("resultado").style.display = "block";
+}
+
+function abrirWhatsApp(){
+
+  const numero = document.getElementById("whatsapp").value;
+
+  if(!numero){
+    alert("Digite o número do WhatsApp.");
+    return;
+  }
+
+  window.open("https://wa.me/" + numero, "_blank");
+}
+</script>
+
+</body>
+</html>
