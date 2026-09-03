@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu site</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial,sans-serif;
+    background:#0b1020;
+    color:white;
+    text-align:center;
+}
+
+.container{
+    max-width:800px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.card{
+    background:#141b31;
+    border-radius:18px;
+    padding:40px 25px;
+    margin-top:30px;
+}
+
+h1{
+    font-size:42px;
+}
+
+p{
+    color:#cbd2ee;
+    font-size:18px;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:15px 25px;
+    background:#18cfff;
+    color:white;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1 id="empresa">Minha empresa</h1>
+
+<h2 id="titulo">Bem-vindo!</h2>
+
+<p id="descricao">Conheça nosso trabalho.</p>
+
+<a class="btn" id="contato" href="#">Entrar em contato</a>
+
+</div>
+
+</div>
+
+<script>
+
+const dados = new URLSearchParams(window.location.search);
+
+const empresa = dados.get("empresa");
+const titulo = dados.get("titulo");
+const descricao = dados.get("descricao");
+const whatsapp = dados.get("whatsapp");
+
+if(empresa){
+    document.getElementById("empresa").textContent = empresa;
+}
+
+if(titulo){
+    document.getElementById("titulo").textContent = titulo;
+}
+
+if(descricao){
+    document.getElementById("descricao").textContent =
